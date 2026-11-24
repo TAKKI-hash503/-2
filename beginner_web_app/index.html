@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>かんたんタスク管理</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <p class="eyebrow">MY DAILY PLANNER</p>
+      <h1>かんたんタスク管理</h1>
+      <p class="subtitle">今日やることを、ひとつずつ。</p>
+    </header>
+
+    <section class="task-card" aria-labelledby="form-title">
+      <h2 id="form-title">タスクを追加</h2>
+      <form id="task-form">
+        <label for="task-input">タスク名</label>
+        <div class="input-row">
+          <input id="task-input" type="text" placeholder="例：書類を整理する" maxlength="80" required>
+          <button type="submit">追加</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="task-card" aria-labelledby="list-title">
+      <div class="list-heading">
+        <h2 id="list-title">タスク一覧</h2>
+        <span id="task-count" class="count">0件</span>
+      </div>
+      <ul id="task-list" class="task-list"></ul>
+      <p id="empty-message" class="empty-message">タスクはまだありません。上のフォームから追加してみましょう！</p>
+      <div class="list-footer">
+        <button id="clear-completed" class="text-button" type="button">完了したタスクを削除</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>タスクはこのブラウザに自動保存されます。</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

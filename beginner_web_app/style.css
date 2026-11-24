@@ -1,0 +1,209 @@
+/* ページ全体の基本設定 */
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #263238;
+  background: #f3f6f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 48px 16px;
+}
+
+.container {
+  width: min(100%, 640px);
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #477c78;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(28px, 6vw, 38px);
+}
+
+.subtitle {
+  margin: 10px 0 0;
+  color: #718087;
+}
+
+.task-card {
+  margin-bottom: 18px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e4eaed;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(36, 58, 66, 0.05);
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #65747a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid #ccd7db;
+  border-radius: 9px;
+  font: inherit;
+}
+
+input:focus {
+  outline: 3px solid rgba(71, 124, 120, 0.16);
+  border-color: #477c78;
+}
+
+button {
+  border: 0;
+  border-radius: 9px;
+  padding: 12px 18px;
+  background: #477c78;
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #376662;
+}
+
+.list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-heading h2 {
+  margin-bottom: 0;
+}
+
+.count {
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #edf5f3;
+  color: #477c78;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.task-list {
+  display: grid;
+  gap: 10px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 14px;
+  border: 1px solid #e7edef;
+  border-radius: 10px;
+}
+
+.task-item input[type="checkbox"] {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  accent-color: #477c78;
+}
+
+.task-name {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.task-item.completed .task-name {
+  color: #9aa6aa;
+  text-decoration: line-through;
+}
+
+.delete-button {
+  padding: 7px 10px;
+  background: #f6eeee;
+  color: #a34d4d;
+  font-size: 12px;
+}
+
+.delete-button:hover {
+  background: #f0dddd;
+}
+
+.empty-message {
+  margin: 22px 0 4px;
+  color: #89969b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.list-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.text-button {
+  padding: 6px 0;
+  background: transparent;
+  color: #718087;
+  font-size: 13px;
+}
+
+.text-button:hover {
+  background: transparent;
+  color: #a34d4d;
+}
+
+footer {
+  color: #9aa6aa;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 28px;
+  }
+
+  .task-card {
+    padding: 18px;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+}
